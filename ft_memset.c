@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -11,14 +11,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-=======
 #include <unistd.h>
 #include <stdio.h>
 
 void    *ft_memset(void *str, int c, size_t n)
 {
-    unsigned char *p;
-    int i;
+	unsigned char *p;
+	int i;
     i = 0;
     p = (unsigned char *) str;
     while (i < n)
@@ -38,4 +37,4 @@ int main(){
         printf("%d ",a[i] );
     }
 }
->>>>>>> f24a796 (part 1 function)
+

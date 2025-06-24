@@ -12,7 +12,7 @@
 
 #include <unistd.h>
 
-void	ft_strlen(char *str)
+size_t ft_strlen(char *str)
 {
 	int	i;
 	i = 0;

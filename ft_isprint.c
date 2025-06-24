@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayonal <ayonal@student.42istanbul.com      +#+  +:+       +#+        */
+/*   By: ayonal <ayonal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 13:41:58 by ayonal            #+#    #+#             */
-/*   Updated: 2025/05/26 13:45:17 by ayonal           ###   ########.fr       */
+/*   Updated: 2025/06/24 13:12:00 by ayonal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,8 @@ ft_isprint(int c)
 		return (1);
 	}
 	return (0);
+}
+
+int main()
+{	
 }
