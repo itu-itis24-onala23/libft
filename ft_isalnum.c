@@ -3,18 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayonal <ayonal@student.42istanbul.com      +#+  +:+       +#+        */
+/*   By: ayonal <ayonal@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 13:15:21 by ayonal            #+#    #+#             */
-/*   Updated: 2025/05/26 13:30:48 by ayonal           ###   ########.fr       */
+/*   Updated: 2025/06/24 15:17:53 by ayonal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-	if((c >= 'A' && c <= 'Z') || (c <= 'z' && c>= 'a') || (c <= 57 && c >= 48))
+	if ((c >= 'A' && c <= 'Z') || (c <= 'z' && c >= 'a') || (c <= 57
+			&& c >= 48))
 	{
 		return (1);
 	}

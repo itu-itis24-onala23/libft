@@ -3,23 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayonal <ayonal@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ayonal <ayonal@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 13:41:58 by ayonal            #+#    #+#             */
-/*   Updated: 2025/06/24 13:12:00 by ayonal           ###   ########.fr       */
+/*   Updated: 2025/06/24 15:18:10 by ayonal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-ft_isprint(int c)
+int	ft_isprint(int c)
 {
-	if(c >= 32 && c <= 126)
+	if (c >= 32 && c <= 126)
 	{
 		return (1);
 	}
 	return (0);
-}
-
-int main()
-{	
 }

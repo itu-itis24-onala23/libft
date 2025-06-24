@@ -1,25 +1,53 @@
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ayonal <ayonal@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/24 15:15:54 by ayonal            #+#    #+#             */
+/*   Updated: 2025/06/24 22:35:37 by ayonal           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+#include "libft.h"
+
+static size_t	count(const char *s, unsigned int start, size_t len)
 {
-    int i;
-    i = 0;
-    char *p;
-    p = (char *)malloc(sizeof(s));
-    if (p == NULL)
-        return (0);
-    while(i < len)
-    {
-        *p = *(s + start);
-        i++;
-        start++;
-        p++;
-    }
-    return (p);
+	size_t	i;
+	size_t	j;
+
+	j = 0;
+	i = (size_t)start;
+	while (*(s + i) != '\0')
+	{
+		i++;
+		j++;
+	}
+	if (len > j)
+		return (j);
+	return (len);
 }
 
-int main(){
-    char *p = "hello";
-    printf("%s",ft_substr(p,1,3));
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	size_t	i;
+	size_t	new_len;
+	char	*p;
+
+	if (start > ft_strlen(s) || len == 0)
+		return (ft_strdup(""));
+	new_len = count(s, start, len);
+	i = 0;
+	p = (char *)malloc(new_len + 1);
+	if (p == NULL)
+		return (0);
+	while (i < new_len)
+	{
+		*(p + i) = *(s + start);
+		start++;
+		i++;
+	}
+	*(p + i) = '\0';
+	return (p);
 }

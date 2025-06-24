@@ -3,21 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayonal <ayonal@student.42istanbul.com      +#+  +:+       +#+        */
+/*   By: ayonal <ayonal@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 12:49:31 by ayonal            #+#    #+#             */
-/*   Updated: 2025/05/26 13:04:35 by ayonal           ###   ########.fr       */
+/*   Updated: 2025/06/24 15:17:48 by ayonal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int isalpha(int c)
+int	ft_isalpha(int c)
 {
-	if((c >= 97 && c<= 122) || (c <= 'Z' && c >= 'A'))
+	if ((c >= 97 && c <= 122) || (c <= 'Z' && c >= 'A'))
 	{
 		return (1);
 	}
 	return (0);
 }
-

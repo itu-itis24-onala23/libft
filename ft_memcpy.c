@@ -1,26 +1,32 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ayonal <ayonal@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/24 15:06:33 by ayonal            #+#    #+#             */
+/*   Updated: 2025/06/24 22:57:54 by ayonal           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memcpy(void *dest_src, const void *src_str, size_t n)
+#include "libft.h"
+
+void	*ft_memcpy(void *dest_src, const void *src_str, size_t n)
 {
-    int i;
-    i = 0;
-    unsigned char *ptr;
-    unsigned char *ptr_src;
-    ptr_src = (unsigned char*) src_str;
-    ptr = (unsigned char *) dest_src;
-    while (i < n)
-    {
-       *(ptr + i) = *(ptr_src + i);
-       i++;
-    }
-    return (dest_src);
-}
-int main(){
-    int dest[3] = {1,2,3};
-    int src[3] = {4,4,4};
-    ft_memcpy(dest,src,20);
-    for(int i =0;i<3;i++){
-        printf("%d ",dest[i]);
-    }
+	size_t			i;
+	unsigned char	*ptr;
+	unsigned char	*ptr_src;
+
+	if (!src_str && !dest_src)
+		return (NULL);
+	i = 0;
+	ptr_src = (unsigned char *)src_str;
+	ptr = (unsigned char *)dest_src;
+	while (i < n)
+	{
+		*(ptr + i) = *(ptr_src + i);
+		i++;
+	}
+	return (dest_src);
 }

@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayonal <ayonal@student.42istanbul.com      +#+  +:+       +#+        */
+/*   By: ayonal <ayonal@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 13:45:26 by ayonal            #+#    #+#             */
-/*   Updated: 2025/05/26 13:48:28 by ayonal           ###   ########.fr       */
+/*   Updated: 2025/06/24 15:58:29 by ayonal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-size_t ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
+
 	i = 0;
 	while (*(str + i) != '\0')
 	{

@@ -1,31 +1,32 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ayonal <ayonal@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/24 15:07:51 by ayonal            #+#    #+#             */
+/*   Updated: 2025/06/24 18:21:49 by ayonal           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 #include <stdio.h>
-#include <string.h>
 
-// arama yapılacak byte sayısı n ile verilir
-void *ft_memchr(const void *str, int c, size_t n)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
-    int i;
-    i = 0;
-    unsigned char *ptr;
-    ptr = (unsigned char *) str;
-    while (i < n)
-    {
-        if (*(ptr + i) == (char)c)
-        {
-            return (ptr + i);
-        }
-        i++;
-    }
-    return (0);
-}
-int main(){
+	size_t			i;
+	unsigned char	*ptr;
 
-int data[3] = {1,2,3};
-int *ptr = ft_memchr(data, 2 , 12);
-for(int i =0;i<2;i++)
-{
-    printf("%d ",ptr[i]);
-}
-
+	i = 0;
+	ptr = (unsigned char *)str;
+	while (i < n)
+	{
+		if (*(ptr + i) == (unsigned char)c)
+		{
+			return (ptr + i);
+		}
+		i++;
+	}
+	return (0);
 }
