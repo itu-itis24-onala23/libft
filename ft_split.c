@@ -6,7 +6,7 @@
 /*   By: ayonal <ayonal@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 15:11:13 by ayonal            #+#    #+#             */
-/*   Updated: 2025/06/24 16:22:15 by ayonal           ###   ########.fr       */
+/*   Updated: 2025/06/25 00:11:26 by ayonal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,35 +49,52 @@ static int	word_len(const char *s, char c)
 	return (i);
 }
 
+static void	free_function(char **str, int j)
+{
+	while (j >= 0)
+	{
+		free(str[j--]);
+	}
+	free(str);
+}
+
+static void	fill(char **str, int len, int j, char **s)
+{
+	int	m;
+
+	m = 0;
+	while (m < len)
+	{
+		str[j][m++] = **s;
+		(*s)++;
+	}
+	str[j][m] = '\0';
+}
+
 char	**ft_split(const char *s, char c)
 {
 	char	**str;
-	int		i;
 	int		j;
-	int		m;
 	int		len;
 
 	j = 0;
-	i = 0;
-	m = 0;
 	str = (char **)malloc((count_word(s, c) + 1) * sizeof(char *));
 	if (str == NULL)
 		return (0);
-	while (*(s + i) != '\0')
+	while (*(s) != '\0')
 	{
-		while (*(s + i) == c)
-			i++;
-		if (*(s + i) == '\0')
+		while (*(s) == c)
+			s++;
+		if (*(s) == '\0')
 			break ;
-		len = word_len(s + i, c);
+		len = word_len(s, c);
 		str[j] = (char *)malloc(len + 1);
 		if (str[j] == NULL)
-			return (0);
-		m = 0;
-		while (m < len)
-			str[j][m++] = s[i++];
-		str[j][m] = '\0';
-		j++;
+		{
+			free_function(str, j);
+			return (NULL);
+		}
+		fill(str, len, j++, (char **)&s);
 	}
 	str[j] = NULL;
 	return (str);
