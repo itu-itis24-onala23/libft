@@ -6,11 +6,9 @@
 /*   By: ayonal <ayonal@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 15:15:01 by ayonal            #+#    #+#             */
-/*   Updated: 2025/06/24 19:39:33 by ayonal           ###   ########.fr       */
+/*   Updated: 2025/06/26 13:37:51 by ayonal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {

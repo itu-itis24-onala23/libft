@@ -6,12 +6,11 @@
 /*   By: ayonal <ayonal@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 15:12:46 by ayonal            #+#    #+#             */
-/*   Updated: 2025/06/24 19:19:37 by ayonal           ###   ########.fr       */
+/*   Updated: 2025/06/26 13:10:31 by ayonal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
 static size_t	len(char *ptr)
 {

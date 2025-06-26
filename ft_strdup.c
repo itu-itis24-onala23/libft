@@ -6,7 +6,7 @@
 /*   By: ayonal <ayonal@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 19:00:16 by ayonal            #+#    #+#             */
-/*   Updated: 2025/06/24 22:58:51 by ayonal           ###   ########.fr       */
+/*   Updated: 2025/06/26 13:02:21 by ayonal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s)
 	int		i;
 
 	i = 0;
-	p = (char *)malloc(ft_strlen(s) + 1);
+	p = malloc(ft_strlen(s) + 1);
 	if (!p)
 		return (NULL);
 	while (*(s + i) != '\0')

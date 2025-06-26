@@ -6,12 +6,11 @@
 /*   By: ayonal <ayonal@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 15:07:28 by ayonal            #+#    #+#             */
-/*   Updated: 2025/06/24 16:19:28 by ayonal           ###   ########.fr       */
+/*   Updated: 2025/06/26 12:06:29 by ayonal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
 static int	int_len(int n)
 {

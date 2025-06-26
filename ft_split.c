@@ -6,12 +6,11 @@
 /*   By: ayonal <ayonal@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 15:11:13 by ayonal            #+#    #+#             */
-/*   Updated: 2025/06/25 00:11:26 by ayonal           ###   ########.fr       */
+/*   Updated: 2025/06/26 13:39:22 by ayonal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static int	count_word(const char *str, char c)
 {
